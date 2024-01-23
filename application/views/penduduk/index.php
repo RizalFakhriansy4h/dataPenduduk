@@ -8,14 +8,14 @@
     <div class="row">
         <?php if (!$this->session->userdata('tombolCariSpesifik')):?>
             <div class="col-md-4">
-                <form action="<?= base_url('penduduk'); ?>" method="post">
+                <!-- <form action="<?= //base_url('penduduk'); ?>" method="post">
                     <div class="input-group mb-6">
                         <input type="text" class="form-control" placeholder="Cari Nama/Email.." name="keyword" autocomplete="off">
                         <div class="input-group-append">
                             <input class="btn btn-primary" type="submit" name="submit">
                         </div>
                     </div>
-                </form>
+                </form> -->
             </div>
         <?php endif;?>
         <div class="col-md-4">
@@ -26,10 +26,6 @@
         
     <div class="row mt-3">
         <div class="col-md">
-
-            <?php if (!$this->session->userdata('tombolCariSpesifik')):?>
-                <h4 class="">Result : <?= $total_rows ?></h4>
-            <?php endif;?>
 
             <table class="table">
                 <thead>
@@ -67,9 +63,9 @@
                 </tbody>
             </table>
 
-            <?php if (!$this->session->userdata('tombolCariSpesifik')):?>
-                <?= $this->pagination->create_links(); ?>
-            <?php endif;?>
+            <?php //if (!$this->session->userdata('tombolCariSpesifik')):?>
+                <?= //$this->pagination->create_links(); ?>
+            <?php //endif;?>
         </div>
     </div>
 </div>
