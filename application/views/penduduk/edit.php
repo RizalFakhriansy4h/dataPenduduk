@@ -32,9 +32,9 @@ $tanggal_format = $tahun . '-' . $bulan . '-' . $tanggal;
                                 <select class="form-select" id="nikProvinsi" name="nikProvinsi">
                                     <?php foreach ($provinsis as $provinsi) : ?>
                                         <?php if ($namaProvinsi["id_provinsi"] === $provinsi["id_provinsi"]) : ?>
-                                            <option value="<?= $provinsi["id_provinsi"] ?>" selected><?= $provinsi["nama_provinsi"] ?></option>
+                                            <option value="<?= $provinsi["id_provinsi"] ?>" selected><?= $provinsi["id_provinsi"] . '-' .$provinsi["nama_provinsi"] ?></option>
                                         <?php else : ?>
-                                            <option value="<?= $provinsi["id_provinsi"] ?>"><?= $provinsi["nama_provinsi"] ?></option>
+                                            <option value="<?= $provinsi["id_provinsi"] ?>"><?= $provinsi["id_provinsi"] . '-' .$provinsi["nama_provinsi"] ?></option>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </select>
@@ -51,9 +51,9 @@ $tanggal_format = $tahun . '-' . $bulan . '-' . $tanggal;
                                 <select class="form-select" id="nikPekerjaan" name="nikPekerjaan">
                                     <?php foreach ($pekerjaans as $pekerjaan) : ?>
                                         <?php if ($namaPekerjaan["id_pekerjaan"] === $pekerjaan["id_pekerjaan"]) : ?>
-                                            <option value="<?= $pekerjaan["id_pekerjaan"] ?>" selected><?= $pekerjaan["nama_pekerjaan"] ?></option>
+                                            <option value="<?= $pekerjaan["id_pekerjaan"] ?>" selected><?= $pekerjaan["id_pekerjaan"] . ' - ' .$pekerjaan["nama_pekerjaan"] ?></option>
                                         <?php else : ?>
-                                            <option value="<?= $pekerjaan["id_pekerjaan"] ?>"><?= $pekerjaan["nama_pekerjaan"] ?></option>
+                                            <option value="<?= $pekerjaan["id_pekerjaan"] ?>"><?= $pekerjaan["id_pekerjaan"] . ' - ' .$pekerjaan["nama_pekerjaan"] ?></option>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </select>
@@ -63,9 +63,9 @@ $tanggal_format = $tahun . '-' . $bulan . '-' . $tanggal;
                                 <select class="form-select" id="nikAgama" name="nikAgama">
                                     <?php foreach ($agamas as $agama) : ?>
                                         <?php if ($namaAgama["id_agama"] === $agama["id_agama"]) : ?>
-                                            <option value="<?= $agama["id_agama"] ?>" selected><?= $agama["nama_agama"] ?></option>
+                                            <option value="<?= $agama["id_agama"] ?>" selected><?= $agama["id_agama"] . ' - ' .$agama["nama_agama"] ?></option>
                                         <?php else : ?>
-                                            <option value="<?= $agama["id_agama"] ?>"><?= $agama["nama_agama"] ?></option>
+                                            <option value="<?= $agama["id_agama"] ?>"><?= $agama["id_agama"] . ' - ' .$agama["nama_agama"] ?></option>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </select>
