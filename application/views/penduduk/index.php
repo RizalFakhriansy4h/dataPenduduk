@@ -5,12 +5,6 @@
         <?php endif; ?>
     </div>
     <h3 class="mt-3" >TABEL PENDUDUK</h3>
-    <div class="row">
-        <div class="col-md-4">
-            <button type="button" class="btn btn-warning float-start " data-bs-toggle="modal" data-bs-target="#cariSpesifik">Cari Spesifik</button>
-            <a href="<?= base_url('index.php/penduduk/reset') ?>" class="btn btn-danger ms-3">Reset</a>
-        </div>
-    </div>
         
     <div class="row mt-3">
         <div class="col-md">
