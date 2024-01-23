@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-4">
             <button type="button" class="btn btn-warning float-start " data-bs-toggle="modal" data-bs-target="#cariSpesifik">Cari Spesifik</button>
-            <a href="<?= base_url('penduduk/reset') ?>" class="btn btn-danger ms-3">Reset</a>
+            <a href="<?= base_url('index.php/penduduk/reset') ?>" class="btn btn-danger ms-3">Reset</a>
         </div>
     </div>
         
@@ -42,9 +42,9 @@
                             <td><?= $pend["nama"] ?></td>
                             <td><?= $pend["email"] ?></td>
                             <td>
-                                <a href="<?= base_url() ?>penduduk/detail/<?= $pend["id"] ?>"><span class="badge bg-success text-light">Detail</span></a>
-                                <a href="<?= base_url() ?>penduduk/edit/<?= $pend["id"] ?>"><span class="badge bg-warning text-light">Edit</span></a>
-                                <a href="<?= base_url() ?>penduduk/hapus/<?= $pend["id"] ?>" class="tombol-hapus"><span class="badge bg-danger text-light">Hapus</span></a>
+                                <a href="<?= base_url('index.php/') ?>penduduk/detail/<?= $pend["id"] ?>"><span class="badge bg-success text-light">Detail</span></a>
+                                <a href="<?= base_url('index.php/') ?>penduduk/edit/<?= $pend["id"] ?>"><span class="badge bg-warning text-light">Edit</span></a>
+                                <a href="<?= base_url('index.php/') ?>penduduk/hapus/<?= $pend["id"] ?>" class="tombol-hapus"><span class="badge bg-danger text-light">Hapus</span></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -62,7 +62,7 @@
                 <h1 class="modal-title fs-5" id="cariSpesifikLabel">Cari Spesifik</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="<?= base_url('penduduk'); ?>" method="post">
+            <form action="<?= base_url('index.php/penduduk'); ?>" method="post">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md">
