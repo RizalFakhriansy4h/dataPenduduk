@@ -4,33 +4,33 @@
         public function index() {
 
 
-            // // tangkap input keyword
-            // if ($this->input->post('submit')) {
+            // tangkap input keyword
+            if ($this->input->post('submit')) {
                 
-            //     $data["keyword"] = $this->input->post('keyword');
-            //     $this->session->set_userdata('keyword', $data['keyword']);
-            // } else {
+                $data["keyword"] = $this->input->post('keyword');
+                $this->session->set_userdata('keyword', $data['keyword']);
+            } else {
 
-            //     $data['keyword'] = $this->session->userdata('keyword');
-            // }
+                $data['keyword'] = $this->session->userdata('keyword');
+            }
 
-            // // config
-            // $this->db->like('nama', $data['keyword']);
-            // $this->db->or_like('email', $data['keyword']);
-            // $this->db->or_like('status', $data['keyword']);
-            // $this->db->from('profil');
-            // $this->db->join('kode_agama', 'kode_agama.id_agama = LEFT(RIGHT(profil.nik, 4), 2)', 'left');
-            // $this->db->join('kode_provinsi', 'kode_provinsi.id_provinsi = LEFT(profil.nik, 2)', 'left');
-            // $this->db->join('kode_pekerjaan', 'kode_pekerjaan.id_pekerjaan = RIGHT(profil.nik, 2)', 'left');
-            // $this->db->or_like('nama_agama', $data['keyword']);
-            // $this->db->or_like('nama_provinsi', $data['keyword']);
-            // $this->db->or_like('nama_pekerjaan', $data['keyword']);
+            // config
+            $this->db->like('nama', $data['keyword']);
+            $this->db->or_like('email', $data['keyword']);
+            $this->db->or_like('status', $data['keyword']);
+            $this->db->from('profil');
+            $this->db->join('kode_agama', 'kode_agama.id_agama = LEFT(RIGHT(profil.nik, 4), 2)', 'left');
+            $this->db->join('kode_provinsi', 'kode_provinsi.id_provinsi = LEFT(profil.nik, 2)', 'left');
+            $this->db->join('kode_pekerjaan', 'kode_pekerjaan.id_pekerjaan = RIGHT(profil.nik, 2)', 'left');
+            $this->db->or_like('nama_agama', $data['keyword']);
+            $this->db->or_like('nama_provinsi', $data['keyword']);
+            $this->db->or_like('nama_pekerjaan', $data['keyword']);
 
-            // $config['total_rows'] = $this->db->count_all_results();
-            // $config['per_page']= 15;
+            $config['total_rows'] = $this->db->count_all_results();
+            $config['per_page']= 15;
             
-            // // initialize
-            // $this->pagination->initialize($config);
+            // initialize
+            $this->pagination->initialize($config);
             
             // KOMPONEN UNTUK CARI SPESIFIK
             $data["provinsis"] = $this->Penduduk_model->getAllProvinsi();
@@ -39,9 +39,9 @@
             $data["status"] = $this->Penduduk_model->getAllStatus();
             
             $data['judul'] = "Penduduk";
-            // $data['total_rows'] = $config['total_rows'];
+            $data['total_rows'] = $config['total_rows'];
             $data["start"] = $this->uri->segment(3);
-            // $data["penduduk"] = $this->Penduduk_model->getPendudukByValue( $config["per_page"], $data["start"], $data["keyword"]);
+            $data["penduduk"] = $this->Penduduk_model->getPendudukByValue( $config["per_page"], $data["start"], $data["keyword"]);
             
             // CEK JIKA TOMBOL SPESIFIK DIGUNAKAN
             if ($this->input->post('tombolCariSpesifik')) {
