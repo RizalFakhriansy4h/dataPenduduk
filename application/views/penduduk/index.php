@@ -35,7 +35,7 @@
                         </td>
                     </tr>
                 <?php endif; ?>
-                    <?php foreach($penduduk as $pend): ?>
+                    <?php $start=0; foreach($penduduk as $pend): ?>
                         <tr>
                             <th scope="row"><?= ++$start ?></th>
                             <th scope="row"><?= $pend["nik"] ?></th>
