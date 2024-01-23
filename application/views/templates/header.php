@@ -42,8 +42,8 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <!-- <a class="nav-link <?= ($judul === "About Me") ? 'active' : ''; ?>" aria-current="page" href="<?= base_url('home/about')?>">About</a> -->
-                                    <a class="nav-link <?= ($judul === "About Me") ? 'active' : ''; ?>" aria-current="page" href="<?= base_url('home/index.php/about')?>">About</a>
+                                    <!-- <a class="nav-link <?= ($judul === "About Me") ? 'active' : ''; ?>" aria-current="page" href="<?= base_url('about')?>">About</a> -->
+                                    <a class="nav-link <?= ($judul === "About Me") ? 'active' : ''; ?>" aria-current="page" href="<?= base_url('index.php/about')?>">About</a>
                                 </li>
                             </ul>
                         </div>
