@@ -39,9 +39,9 @@
             $data["status"] = $this->Penduduk_model->getAllStatus();
             
             $data['judul'] = "Penduduk";
-            $data['total_rows'] = $config['total_rows'];
+            // $data['total_rows'] = $config['total_rows'];
             $data["start"] = $this->uri->segment(3);
-            $data["penduduk"] = $this->Penduduk_model->getPendudukByValue( $config["per_page"], $data["start"], $data["keyword"]);
+            // $data["penduduk"] = $this->Penduduk_model->getPendudukByValue( $config["per_page"], $data["start"], $data["keyword"]);
             
             // CEK JIKA TOMBOL SPESIFIK DIGUNAKAN
             if ($this->input->post('tombolCariSpesifik')) {
