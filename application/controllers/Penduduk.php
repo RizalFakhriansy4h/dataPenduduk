@@ -181,5 +181,32 @@
             $this->load->view('templates/footer');
         }
         
-    
+        public function countPekerjaan(){
+            $data['judul'] = "Hitung Pekerjaan Penduduk";
+            $data["provinsis"] = $this->Penduduk_model->getAllProvinsi();
+            $data["dataPekerjaan"] = $this->Penduduk_model->getPekerjaanInfoByProvinsi('');
+            
+            // ====================================================
+            $keyword = $this->input->post("nikProvinsi");
+            $tombolCari = $this->input->post("tombolKerjaPerubahan");
+            $tombolReset = $this->input->post("tombolReset");
+            
+            if($tombolCari) {
+                $data["dataPekerjaan"] = $this->Penduduk_model->getPekerjaanInfoByProvinsi($keyword);
+                $this->session->set_userdata('keywordKerja', $keyword);
+            }
+            
+            if($tombolReset){
+                $this->session->sess_destroy();   
+            }
+
+
+            
+            $this->load->view('templates/header',$data);
+            $this->load->view('penduduk/count_pekerjaan',$data);
+            $this->load->view('templates/footer');
+        }
+        
+        
+        
     }    

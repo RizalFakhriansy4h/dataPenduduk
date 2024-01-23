@@ -34,14 +34,16 @@
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle <?= ($judul === "Hitung Status Penduduk") ? 'active' : ''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Table Perhitungan</a>
+                                    <a class="nav-link dropdown-toggle <?= ($judul === "Hitung Status Penduduk" || $judul === "Hitung Pekerjaan Penduduk") ? 'active' : ''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Table Perhitungan</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="<?= base_url('penduduk/countStatus')?>">Hitung Status</a></li>
+                                        <li><a class="dropdown-item" href="<?= base_url('penduduk/countPekerjaan')?>">Hitung Pekerjaan</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($judul === "About Me") ? 'active' : ''; ?>" aria-current="page" href="<?= base_url('home/about')?>">About</a>
+                                    <!-- <a class="nav-link <?= ($judul === "About Me") ? 'active' : ''; ?>" aria-current="page" href="<?= base_url('home/about')?>">About</a> -->
+                                    <a class="nav-link <?= ($judul === "About Me") ? 'active' : ''; ?>" aria-current="page" href="<?= base_url('home/index.php/about')?>">About</a>
                                 </li>
                             </ul>
                         </div>

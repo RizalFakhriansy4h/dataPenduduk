@@ -8,7 +8,7 @@
         }
         public function getAllProvinsi() {
             
-        $this->db->order_by('nama_provinsi', 'ASC');
+        // $this->db->order_by('nama_provinsi');
             return $this->db->get('kode_provinsi')->result_array();
             
         }
@@ -185,9 +185,38 @@
             return $query->result_array();
         }
         
-
-        
-        
-        
+        public function getPekerjaanInfoByProvinsi($namaProvinsi) {
+            // Query for jumlah_pekerja
+            $this->db->select('pv.nama_provinsi, pk.nama_pekerjaan, COUNT(*) AS jumlah_pekerja');
+            $this->db->from('profil pr');
+            $this->db->join('kode_provinsi pv', 'pv.id_provinsi = LEFT(pr.nik, 2)');
+            $this->db->join('kode_pekerjaan pk', 'pk.id_pekerjaan = RIGHT(pr.nik, 2)');
+            $this->db->where('pv.nama_provinsi', $namaProvinsi);
+            $this->db->group_by('pv.nama_provinsi, pk.nama_pekerjaan');
+            $query_jumlah_pekerja = $this->db->get();
+    
+            // Query for total_orang_provinsi
+            $this->db->select('COUNT(*) as total_orang_provinsi');
+            $this->db->from('profil pr_total');
+            $this->db->join('kode_provinsi pv_total', 'pv_total.id_provinsi = LEFT(pr_total.nik, 2)');
+            $this->db->where('pv_total.nama_provinsi', $namaProvinsi);
+            $query_total_orang_provinsi = $this->db->get();
+    
+            // Query for total_pekerjaan_provinsi
+            $this->db->select('COUNT(DISTINCT pk_total.nama_pekerjaan) as total_pekerjaan_provinsi');
+            $this->db->from('profil pr_total');
+            $this->db->join('kode_provinsi pv_total', 'pv_total.id_provinsi = LEFT(pr_total.nik, 2)');
+            $this->db->join('kode_pekerjaan pk_total', 'pk_total.id_pekerjaan = RIGHT(pr_total.nik, 2)');
+            $this->db->where('pv_total.nama_provinsi', $namaProvinsi);
+            $query_total_pekerjaan_provinsi = $this->db->get();
+    
+            return array(
+                'jumlah_pekerja' => $query_jumlah_pekerja->result_array(),
+                'total_orang_provinsi' => $query_total_orang_provinsi->result_array(),
+                'total_pekerjaan_provinsi' => $query_total_pekerjaan_provinsi->result_array(),
+            );
+        }
+    
+       
 
     }
