@@ -112,7 +112,7 @@
                 
                 $this->Penduduk_model->tambahDataPenduduk();
                 $this->session->set_flashdata('flash','Ditambahkan');
-                redirect('penduduk');
+                redirect('index.php/penduduk');
                 
             }
             
@@ -123,7 +123,7 @@
         public function hapus($id){
             $this->db->delete('profil',['id'=> $id]);
             $this->session->set_flashdata('flash','Dihapus');
-    		redirect('penduduk');
+    		redirect('index.php/penduduk');
         }
         
         public function edit($id){
@@ -166,7 +166,7 @@
                 
                 $this->Penduduk_model->editDataPenduduk();
 			    $this->session->set_flashdata('flash','Diedit');
-			    redirect('penduduk');
+			    redirect('index.php/penduduk');
                 
             }
 	    
