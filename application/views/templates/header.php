@@ -28,16 +28,16 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle <?= ($judul === "Penduduk" || $judul === "Detail Penduduk" || $judul === "Tambah Data Penduduk" || $judul === "Edit Data Penduduk") ? 'active' : ''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tabel Penduduk</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="<?= base_url('penduduk')?>">Data Penduduk</a></li>
-                                        <li><a class="dropdown-item" href="<?= base_url('penduduk/tambah')?>">Tambah Data Penduduk</a></li>
+                                        <li><a class="dropdown-item" href="<?= base_url('index.php/penduduk')?>">Data Penduduk</a></li>
+                                        <li><a class="dropdown-item" href="<?= base_url('index.php/penduduk/tambah')?>">Tambah Data Penduduk</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle <?= ($judul === "Hitung Status Penduduk" || $judul === "Hitung Pekerjaan Penduduk") ? 'active' : ''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Table Perhitungan</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="<?= base_url('penduduk/countStatus')?>">Hitung Status</a></li>
-                                        <li><a class="dropdown-item" href="<?= base_url('penduduk/countPekerjaan')?>">Hitung Pekerjaan</a></li>
+                                        <li><a class="dropdown-item" href="<?= base_url('index.php/penduduk/countStatus')?>">Hitung Status</a></li>
+                                        <li><a class="dropdown-item" href="<?= base_url('index.php/penduduk/countPekerjaan')?>">Hitung Pekerjaan</a></li>
                                     </ul>
                                 </li>
 
