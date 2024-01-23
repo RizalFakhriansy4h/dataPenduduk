@@ -15,7 +15,7 @@
     <div class="row mt-3">
         <div class="col-md">
 
-            <table class="table">
+            <table class="table" id="example">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
