@@ -6,18 +6,6 @@
     </div>
     <h3 class="mt-3" >TABEL PENDUDUK</h3>
     <div class="row">
-        <?php if (!$this->session->userdata('tombolCariSpesifik')):?>
-            <div class="col-md-4">
-                <!-- <form action="<?= //base_url('penduduk'); ?>" method="post">
-                    <div class="input-group mb-6">
-                        <input type="text" class="form-control" placeholder="Cari Nama/Email.." name="keyword" autocomplete="off">
-                        <div class="input-group-append">
-                            <input class="btn btn-primary" type="submit" name="submit">
-                        </div>
-                    </div>
-                </form> -->
-            </div>
-        <?php endif;?>
         <div class="col-md-4">
             <button type="button" class="btn btn-warning float-start " data-bs-toggle="modal" data-bs-target="#cariSpesifik">Cari Spesifik</button>
             <a href="<?= base_url('penduduk/reset') ?>" class="btn btn-danger ms-3">Reset</a>
@@ -62,10 +50,6 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
-
-            <?php //if (!$this->session->userdata('tombolCariSpesifik')):?>
-                <?= //$this->pagination->create_links(); ?>
-            <?php //endif;?>
         </div>
     </div>
 </div>
