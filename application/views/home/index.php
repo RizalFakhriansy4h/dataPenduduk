@@ -4,7 +4,7 @@
       <div class="jumbotron jumbotron-fluid mt-5">
         <div class="container">
           <h1 class="display-4">Hello <?= $nama; ?></h1>
-          <p class="lead">Untuk mengakses Halaman CRUD, silakan kunjungi bagian <strong>penduduk di navbar</strong> atau klik <a href="<?= base_url('penduduk')?>">di sini</a>.</p>
+          <p class="lead">Untuk mengakses Halaman CRUD, silakan kunjungi bagian <strong>penduduk di navbar</strong> atau klik <a href="<?= base_url('index.php/penduduk')?>">di sini</a>.</p>
         </div>
       </div>
     </div>
