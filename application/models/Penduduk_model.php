@@ -20,7 +20,7 @@
         }
         public function getAllAgama() {
             
-            $this->db->order_by('nama_agama', 'ASC');
+            // $this->db->order_by('nama_agama', 'ASC');
             return $this->db->get('kode_agama')->result_array();
             
         }

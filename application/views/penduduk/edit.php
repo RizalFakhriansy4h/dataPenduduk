@@ -32,7 +32,7 @@ $tanggal_format = $tahun . '-' . $bulan . '-' . $tanggal;
                                 <select class="form-select" id="nikProvinsi" name="nikProvinsi">
                                     <?php foreach ($provinsis as $provinsi) : ?>
                                         <?php if ($namaProvinsi["id_provinsi"] === $provinsi["id_provinsi"]) : ?>
-                                            <option value="<?= $provinsi["id_provinsi"] ?>" selected><?= $provinsi["id_provinsi"] . '-' .$provinsi["nama_provinsi"] ?></option>
+                                            <option value="<?= $provinsi["id_provinsi"] ?>" selected><?= $provinsi["id_provinsi"] . ' - ' .$provinsi["nama_provinsi"] ?></option>
                                         <?php else : ?>
                                             <option value="<?= $provinsi["id_provinsi"] ?>"><?= $provinsi["id_provinsi"] . '-' .$provinsi["nama_provinsi"] ?></option>
                                         <?php endif; ?>

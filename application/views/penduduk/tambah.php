@@ -37,7 +37,7 @@
                                 <label for="nikPekerjaan" class="form-label">Pekerjaan</label>
                                 <select class="form-select" id="nikPekerjaan" name="nikPekerjaan">
                                     <?php foreach($pekerjaans as $pekerjaan): ?>
-                                        <option value="<?= $pekerjaan["id_pekerjaan"] ?>"><?= $pekerjaan["id_pekerjaan"] . '-' .$pekerjaan["nama_pekerjaan"] ?></option>
+                                        <option value="<?= $pekerjaan["id_pekerjaan"] ?>"><?= $pekerjaan["id_pekerjaan"] . ' - ' .$pekerjaan["nama_pekerjaan"] ?></option>
                                     <?php endforeach;?>
                                     </select>
                                 </div>
