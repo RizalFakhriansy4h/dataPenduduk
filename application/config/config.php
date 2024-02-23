@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'https://rizalfakhri.online/ci_rizal/';
-// $config['base_url'] = 'http://localhost/data_kependudukan/';
+// $config['base_url'] = 'https://rizalfakhri.online/ci_rizal/';
+$config['base_url'] = 'http://localhost/data_kependudukan/';
 
 /*
 |--------------------------------------------------------------------------
